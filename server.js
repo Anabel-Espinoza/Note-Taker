@@ -1,14 +1,10 @@
 const express = require('express')
 const path = require('path')
-const fs = require('fs')
-const util = require('util')
-const generateUniqueId = require('generate-unique-id');
-const api = require('./routes/api.js')
+const api = require('./routes/api')
 
 const PORT = 3001
 const app = express()
 
-// Costum middleware?
 app.use(express.json()) // allow to parse json info from body
 app.use(express.urlencoded({ extended: true})) // access info from forms
 app.use('/api/notes', api)
