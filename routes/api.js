@@ -1,6 +1,6 @@
 const api = require('express').Router()
 const generateUniqueId = require('generate-unique-id');
-const { readFromFile, readAndAppend } = require('../helpers/fsHelper')
+const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsHelper')
 
 // GET route to retrieve stored notes
 api.get('/', (req, res) => {
@@ -31,8 +31,14 @@ api.post('/', (req, res) => {
 api.delete('/:id', (req, res) => {
     // res.send('delete')
     const id = req.query.id
+    console.log(id)
     readFromFile('./db/db.json')
-
+        .then((data) => JSON.parse(data))
+        .then((json) => {
+            const newArray = json.filter((note) => note.id !== id)
+            writeToFile('./db/db.json', newArray)
+            res.json(`Note ${id} has been deleted`)
+        })
 })
 
 
