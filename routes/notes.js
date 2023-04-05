@@ -1,14 +1,14 @@
-const api = require('express').Router()
+const notes = require('express').Router()
 const generateUniqueId = require('generate-unique-id');
 const { readFromFile, readAndAppend, writeToFile } = require('../helpers/fsHelper')
 
 // GET route to retrieve stored notes
-api.get('/', (req, res) => {
+notes.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 })
 
 // POST route to submit notes
-api.post('/', (req, res) => {
+notes.post('/', (req, res) => {
     // res.send('post')
     const { title, text } = req.body
    // check if both, title and text were filled out
@@ -27,7 +27,7 @@ api.post('/', (req, res) => {
 })
   
 // DELETE specific id note
-api.delete('/:id', (req, res) => {
+notes.delete('/:id', (req, res) => {
     // res.send('delete')
     const id = req.params.id
     console.log(id)
@@ -40,4 +40,4 @@ api.delete('/:id', (req, res) => {
         })
 })
 
-module.exports = api
+module.exports = notes

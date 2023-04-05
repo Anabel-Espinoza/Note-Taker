@@ -1,13 +1,13 @@
 const express = require('express')
 const path = require('path')
-const api = require('./routes/api')
+const api = require('./routes/routes')
 
 const PORT = 3001
 const app = express()
 
-app.use(express.json()) // allow to parse json info from body
-app.use(express.urlencoded({ extended: true})) // access info from forms
-app.use('/api/notes', api)
+app.use(express.json())
+app.use(express.urlencoded({ extended: true})) 
+app.use('/api', api)
 
 app.use(express.static('public'))
 
