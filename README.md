@@ -20,7 +20,7 @@ N/A
 
 ## Usage
 
-The link to access the deploy application is: https://damp-reaches-66631.herokuapp.com/ 
+The link to access the deploy application is: https://easy-notes-taker.herokuapp.com/ 
 
 - From the homepage, click "Get Started" button.
 - Current list of notes are on the left side of the screen. Can read them by clicking on them.
