@@ -1,4 +1,8 @@
 # Note Taker 
 
 ## Credits
-- Generate Unique ID: https://www.npmjs.com/package/generate-unique-id
+
+npm packages:
+- Express
+- nodemon
+- generate-unique-id: https://www.npmjs.com/package/generate-unique-id
