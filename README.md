@@ -5,7 +5,7 @@
 
 ## Description
 
-This application allows the user to write, save, and delete previous notes. This is an easy way to keep track of users toughts and keep a track of their to-do tasks.
+This application allows the user to write, save, and delete previous notes. This is an easy way to keep track of users toughts and their to-do tasks.
 
 ## Table of Contents
 
@@ -33,12 +33,13 @@ The website looks like the following images (homepage and notes page):
 
 ## Credits
 
+- Starter code provided by GA Tech Bootcamp.
+- Mini-Project from Express Module used as reference.
+
 NPM packages:
 - Express
 - nodemon
 - generate-unique-id: https://www.npmjs.com/package/generate-unique-id
-
-Mini-Project from Express Module used as reference.
 
 ## License
 
